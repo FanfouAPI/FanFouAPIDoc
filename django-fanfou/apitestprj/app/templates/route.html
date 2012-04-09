@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>饭否API测试</title>
+  </head>
+  <body>
+    <div>
+      <div class="header">
+        <div id="logo">
+          <h1><a href="/" style="text-decoration:none" title="首页">API测试</a></h1>
+        </div>
+        <div class="link">
+          <a target="_blank" href="{{ ffuser.get_absolute_url }}" style="text-decoration:none">{{ ffuser.screen_name }}</a>
+          <a href="{{ site_url }}" style="text-decoration:none">饭否首页</a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="login">
+          <a href="{% url fanfou_oauth %}" class="button button-green">
+            <span>连接饭否</span>
+          </a>
+        </div>
+        <div class="login">
+	  <form action="{% url fanfou_oauth_callback %}">
+            <a target="_blank" href="{% url fanfou_oauth %}?oauth_callback=oob" class="button button-green">
+              获取PIN码
+            </a>
+	    <input type="text" name="verifier" value=""/>
+	    <input type="submit" value="填入PIN码后提交"/>
+	  </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

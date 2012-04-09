@@ -1,0 +1,17 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <h3>API测试面板</h3>
+    <div class="link">
+      <a target="_blank" href="{{ ffuser.get_absolute_url }}" style="text-decoration:none">{{ ffuser.screen_name }}</a>
+      <a href="{{ site_url }}" style="text-decoration:none">饭否首页</a> |
+      <a href="{% url logout %}">退出</a>
+    </div>
+    <ul>
+      <li>
+	<a href="{% url update_profile_image %}">上传头像</a>
+      </li>
+    </ul>
+  </body>
+</html>

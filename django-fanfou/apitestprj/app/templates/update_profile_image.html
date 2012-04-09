@@ -1,0 +1,20 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <p>
+      <a href="{% url dashboard %}">API测试面板</a> - 上传头像图片
+    </p>
+    <h3>上传头像图片</h3>
+    <p>
+      <img src="{{ u.profile_image_url_large }}"/>
+    </p>
+    <form action="" method="POST" enctype="multipart/form-data">
+      <p>
+	{% csrf_token %}
+	{{ form }}
+      </p>
+      <input type="submit">上传</input>
+      </form>
+  </body>
+</html>

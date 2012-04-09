@@ -1,0 +1,44 @@
+Copy right & License
+================
+
+The fanfouapi is licensed under MIT license (http://www.opensource.org/licenses/MIT)
+Copy right: fanfou.com 2011 - 2012
+Author: zengke@fanfou.com
+
+Installl fanfouapi
+================
+% cd contrib
+% sudo python setup.py install
+
+Run test project
+================
+
+% cd apitestprj
+% python manage.py xauth <username>
+
+copy the following example output to settings.py or local_settings.py
+
+```
+PUBLISHER_OAUTH_TOKEN = '......'
+PUBLISHER_OAUTH_SECRET = '.....'
+```
+sync db (optional)
+% python manage.py syncdb
+
+run the server
+% python manage.py runserver
+
+goto http://localhost:8000 to access the project
+
+Other interesting cookies
+% python manage.py callapi statuses/home_timeline
+...
+
+List of django management commands
+================
+
+* xauth <username>
+* oauth_pin
+* callapi
+* posturl
+
