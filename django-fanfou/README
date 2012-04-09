@@ -14,6 +14,10 @@ Run test project
 ================
 
 % cd apitestprj
+
+fill consumer key/secret by set FF_API_KEY and FF_API_SECRET in settings.py
+
+Authenticate yourself
 % python manage.py xauth <username>
 
 copy the following example output to settings.py or local_settings.py
