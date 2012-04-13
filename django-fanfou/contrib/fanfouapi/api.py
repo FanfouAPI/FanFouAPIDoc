@@ -15,7 +15,7 @@ API_HOST = getattr(settings, 'API_HOST', 'api.fanfou.com')
 SEARCH_HOST = getattr(settings, 'SEARCH_HOST', 'api.fanfou.com')
 
 class API(object):
-    """Sina API"""
+    """Fanfou API"""
 
     def __init__(self, auth_handler=None,
             host=API_HOST, search_host=SEARCH_HOST,
